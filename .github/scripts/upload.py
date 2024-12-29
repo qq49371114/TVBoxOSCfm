@@ -28,7 +28,7 @@ def sendAPKs(path):
         "chat_id": CHAT_ID,
         "media": json.dumps(media)
     }
-    response = requests.post(urlPrefix + "/sendMediaGroup", params=parma, files=files)
+    response = requests.post(urlPrefix + "/sendMediaGroup", params=parma, files=files, timeout=60)
     print(response.json())
 
 if __name__ == "__main__":
